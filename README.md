@@ -1,6 +1,6 @@
-# FarmFresh Hub 🌱
+FarmFresh Hub 🌱
 
-A full-stack MERN project focused on reducing post-harvest food wastage by enabling farmers to store produce and sell directly to consumers using a digital marketplace.
+A full-stack MERN project focused on reducing post-harvest wastage by connecting farmers directly with consumers using smart storage and AI-powered features.
 
 ## 🚀 Tech Stack
 - MongoDB
@@ -10,12 +10,12 @@ A full-stack MERN project focused on reducing post-harvest food wastage by enabl
 - AWS (S3)
 - AI (Speech Recognition, Translation, Forecasting)
 
-## ✨ Core Features
-- Farmer authentication & produce listing
-- Smart marketplace for consumers
-- Voice-based input for farmers
+## 🎯 Features
+- Farmer produce listing
+- Smart marketplace
+- Voice-based input
 - AI-assisted price forecasting
-- Secure JWT-based authentication
+- Secure authentication
 
-## 📦 Project Status
+## 📌 Status
 🚧 Development in progress
