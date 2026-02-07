@@ -1,14 +1,12 @@
-// Remove the import
-// import ImageUpload from '../components/ImageUpload';
-
-// Replace the image section with:
 <div style={styles.imageSection}>
   <h4>Product Image</h4>
   <input
     type="text"
-    placeholder="Image URL (coming soon)"
+    placeholder="Image URL (optional)"
+    name="imageUrl"
+    value={newProduct.imageUrl}
+    onChange={handleInputChange}
     style={styles.input}
-    disabled
   />
-  <small>Image upload feature coming in next update</small>
+  <small>Enter image URL or leave blank for default</small>
 </div>
