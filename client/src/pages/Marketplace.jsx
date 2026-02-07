@@ -1,5 +1,10 @@
+// FIND this line (around line 4):
+import ImageUpload from '../components/ImageUpload';
+// THEN FIND where it's used (around line 200):
+<ImageUpload onUploadSuccess={handleImageUpload} />
+
+// REPLACE WITH simple input:
 <div style={styles.imageSection}>
-  <h4>Product Image</h4>
   <input
     type="text"
     placeholder="Image URL (optional)"
@@ -8,5 +13,4 @@
     onChange={handleInputChange}
     style={styles.input}
   />
-  <small>Enter image URL or leave blank for default</small>
 </div>
