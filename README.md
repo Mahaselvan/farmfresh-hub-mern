@@ -1,21 +1,20 @@
-FarmFresh Hub 🌱
+## ✅ Day 7 - Authentication & Frontend Complete
 
-A full-stack MERN project focused on reducing post-harvest wastage by connecting farmers directly with consumers using smart storage and AI-powered features.
+### What Works:
+- **User Registration** - Farmers/Consumers can create accounts
+- **User Login** - Secure authentication with JWT tokens
+- **Protected Routes** - Role-based access control
+- **Dashboard** - Different UI for farmers vs consumers
+- **Marketplace UI** - Product listing and management interface
 
-## 🚀 Tech Stack
-- MongoDB
-- Express.js
-- React.js
-- Node.js
-- AWS (S3)
-- AI (Speech Recognition, Translation, Forecasting)
+### Tech Stack Used:
+- **Frontend**: React, React Router, Axios, Context API
+- **Backend**: Express.js, MongoDB, Mongoose, JWT, bcrypt
+- **Development**: Nodemon, Vite, ESLint
 
-## 🎯 Features
-- Farmer produce listing
-- Smart marketplace
-- Voice-based input
-- AI-assisted price forecasting
-- Secure authentication
-
-## 📌 Status
-🚧 Development in progress
+### Screenshots:
+- Login Page
+- Registration Form  
+- Farmer Dashboard
+- Consumer Dashboard
+- Marketplace UI
