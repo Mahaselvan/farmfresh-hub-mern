@@ -1,20 +1,50 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
+import Marketplace from './pages/Marketplace';
+import authService from './services/auth';
+import './App.css';
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/hello")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message))
-      .catch((err) => console.error(err));
+    // Check if user is logged in
+    const storedUser = authService.getCurrentUser();
+    if (storedUser) {
+      setUser(storedUser.user);
+    }
   }, []);
 
+  const handleLogout = () => {
+    authService.logout();
+    setUser(null);
+  };
+
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>🌱 FarmFresh Hub</h1>
-      <p>{message}</p>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
+          <Route 
+            path="/dashboard" 
+            element={
+              user ? <Dashboard user={user} onLogout={handleLogout} /> : <Navigate to="/login" />
+            } 
+          />
+          <Route 
+            path="/marketplace" 
+            element={
+              <Marketplace user={user} />
+            } 
+          />
+          <Route path="/" element={<Navigate to={user ? "/dashboard" : "/login"} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
